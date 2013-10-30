@@ -1,3 +1,8 @@
+2013-10-30  Joern Rennecke  <joern.rennecke@embecosm.com>
+
+	* libc/include/machine/ieeefp.h (__arc__):
+	Define __IEEE_USE_SF_EMULATION.
+
 2013-08-09  Joern Rennecke  <joern.rennecke@embecosm.com>
 
 	* libc/machine/arc/strchr-700.S (strchr) [!__LITTLE_ENDIAN__]:

@@ -1,0 +1,11 @@
+2013-10-30  Joern Rennecke  <joern.rennecke@embecosm.com>
+
+	* libm/math/sf_sin_int_gentab.c, libm/math/sf_sin_int_tab.c: New file.
+	* libm/math/sf_sin_int.c, libm/math/sf_cos_int.c: Likewise.
+	* libm/math/Makefile.am (fsrc): Add sf_sin_int.c, sf_cos_int.c and
+	sf_sin_int_tab.c.
+	* libm/math/Makefile.in: Regenerate.
+	* libm/math/sf_sin.c: Don't define sinf if __IEEE_USE_SF_EMULATION
+	is defined.
+	* libm/math/sf_cos.c: Don't define cosf if __IEEE_USE_SF_EMULATION
+	is defined.

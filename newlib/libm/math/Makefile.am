@@ -47,6 +47,7 @@ fsrc =	kf_rem_pio2.c \
 	sf_cos.c sf_erf.c sf_fabs.c sf_floor.c \
 	sf_frexp.c sf_ldexp.c \
 	sf_signif.c sf_sin.c \
+	sf_sin_int.c sf_cos_int.c sf_sin_int_tab.c \
 	sf_tan.c sf_tanh.c \
 	wf_exp2.c wf_tgamma.c
 

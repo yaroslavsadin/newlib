@@ -136,8 +136,10 @@ am__objects_2 = lib_a-kf_rem_pio2.$(OBJEXT) lib_a-kf_cos.$(OBJEXT) \
 	lib_a-sf_fabs.$(OBJEXT) lib_a-sf_floor.$(OBJEXT) \
 	lib_a-sf_frexp.$(OBJEXT) lib_a-sf_ldexp.$(OBJEXT) \
 	lib_a-sf_signif.$(OBJEXT) lib_a-sf_sin.$(OBJEXT) \
-	lib_a-sf_tan.$(OBJEXT) lib_a-sf_tanh.$(OBJEXT) \
-	lib_a-wf_exp2.$(OBJEXT) lib_a-wf_tgamma.$(OBJEXT)
+	lib_a-sf_sin_int.$(OBJEXT) lib_a-sf_cos_int.$(OBJEXT) \
+	lib_a-sf_sin_int_tab.$(OBJEXT) lib_a-sf_tan.$(OBJEXT) \
+	lib_a-sf_tanh.$(OBJEXT) lib_a-wf_exp2.$(OBJEXT) \
+	lib_a-wf_tgamma.$(OBJEXT)
 @USE_LIBTOOL_FALSE@am_lib_a_OBJECTS = $(am__objects_1) \
 @USE_LIBTOOL_FALSE@	$(am__objects_2)
 lib_a_OBJECTS = $(am_lib_a_OBJECTS)
@@ -167,8 +169,8 @@ am__objects_4 = kf_rem_pio2.lo kf_cos.lo kf_sin.lo kf_tan.lo \
 	wf_pow.lo wf_remainder.lo wf_scalb.lo wf_sinh.lo wf_sqrt.lo \
 	wf_sincos.lo wf_drem.lo sf_asinh.lo sf_atan.lo sf_ceil.lo \
 	sf_cos.lo sf_erf.lo sf_fabs.lo sf_floor.lo sf_frexp.lo \
-	sf_ldexp.lo sf_signif.lo sf_sin.lo sf_tan.lo sf_tanh.lo \
-	wf_exp2.lo wf_tgamma.lo
+	sf_ldexp.lo sf_signif.lo sf_sin.lo sf_sin_int.lo sf_cos_int.lo \
+	sf_sin_int_tab.lo sf_tan.lo sf_tanh.lo wf_exp2.lo wf_tgamma.lo
 @USE_LIBTOOL_TRUE@am_libmath_la_OBJECTS = $(am__objects_3) \
 @USE_LIBTOOL_TRUE@	$(am__objects_4)
 libmath_la_OBJECTS = $(am_libmath_la_OBJECTS)
@@ -369,6 +371,7 @@ fsrc = kf_rem_pio2.c \
 	sf_cos.c sf_erf.c sf_fabs.c sf_floor.c \
 	sf_frexp.c sf_ldexp.c \
 	sf_signif.c sf_sin.c \
+	sf_sin_int.c sf_cos_int.c sf_sin_int_tab.c \
 	sf_tan.c sf_tanh.c \
 	wf_exp2.c wf_tgamma.c
 
@@ -1235,6 +1238,24 @@ lib_a-sf_sin.o: sf_sin.c
 
 lib_a-sf_sin.obj: sf_sin.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_sin.obj `if test -f 'sf_sin.c'; then $(CYGPATH_W) 'sf_sin.c'; else $(CYGPATH_W) '$(srcdir)/sf_sin.c'; fi`
+
+lib_a-sf_sin_int.o: sf_sin_int.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_sin_int.o `test -f 'sf_sin_int.c' || echo '$(srcdir)/'`sf_sin_int.c
+
+lib_a-sf_sin_int.obj: sf_sin_int.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_sin_int.obj `if test -f 'sf_sin_int.c'; then $(CYGPATH_W) 'sf_sin_int.c'; else $(CYGPATH_W) '$(srcdir)/sf_sin_int.c'; fi`
+
+lib_a-sf_cos_int.o: sf_cos_int.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_cos_int.o `test -f 'sf_cos_int.c' || echo '$(srcdir)/'`sf_cos_int.c
+
+lib_a-sf_cos_int.obj: sf_cos_int.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_cos_int.obj `if test -f 'sf_cos_int.c'; then $(CYGPATH_W) 'sf_cos_int.c'; else $(CYGPATH_W) '$(srcdir)/sf_cos_int.c'; fi`
+
+lib_a-sf_sin_int_tab.o: sf_sin_int_tab.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_sin_int_tab.o `test -f 'sf_sin_int_tab.c' || echo '$(srcdir)/'`sf_sin_int_tab.c
+
+lib_a-sf_sin_int_tab.obj: sf_sin_int_tab.c
+	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_sin_int_tab.obj `if test -f 'sf_sin_int_tab.c'; then $(CYGPATH_W) 'sf_sin_int_tab.c'; else $(CYGPATH_W) '$(srcdir)/sf_sin_int_tab.c'; fi`
 
 lib_a-sf_tan.o: sf_tan.c
 	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(lib_a_CFLAGS) $(CFLAGS) -c -o lib_a-sf_tan.o `test -f 'sf_tan.c' || echo '$(srcdir)/'`sf_tan.c

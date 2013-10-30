@@ -265,6 +265,9 @@
 #else
 #define __IEEE_LITTLE_ENDIAN
 #endif
+#ifndef __ARC_SPFP__
+#define __IEEE_USE_SF_EMULATION
+#endif
 #endif
 
 #ifdef __CRX__

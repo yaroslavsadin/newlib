@@ -15,6 +15,7 @@
 
 #include "fdlibm.h"
 
+#ifndef __IEEE_USE_SF_EMULATION
 #ifdef __STDC__
 static const float one=1.0;
 #else
@@ -52,6 +53,7 @@ static float one=1.0;
 	    }
 	}
 }
+#endif /* !__IEEE_USE_SF_EMULATION */
 
 #ifdef _DOUBLE_IS_32BITS
 

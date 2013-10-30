@@ -15,6 +15,7 @@
 
 #include "fdlibm.h"
 
+#ifndef __IEEE_USE_SF_EMULATION
 #ifdef __STDC__
 	float sinf(float x)
 #else
@@ -46,6 +47,7 @@
 	    }
 	}
 }
+#endif /* !__IEEE_USE_SF_EMULATION */
 
 #ifdef _DOUBLE_IS_32BITS
 
