@@ -28,7 +28,7 @@
    POSSIBILITY OF SUCH DAMAGE.
 */
 
-// A minor strcat and strcpy corruption verification test
+// A minor strcat corruption verification test
 
 #define MAX_ERRORS 5
 #define STRING_SIZE 128
