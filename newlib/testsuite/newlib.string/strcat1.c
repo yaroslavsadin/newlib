@@ -31,6 +31,16 @@
 // A minor strcat corruption verification test
 
 #define MAX_ERRORS 5
+/*
+The tests below is combinatorial, STRING_SIZE needs to be just big enough that
+the following conditions are met:
+	At least the size of the largest chunk size the algorithm uses, plus 1.
+	In this case, 32 + 1 bytes
+		This allows to test situations where the byte is present right at the
+		end of that chunk.
+
+The 128 value was chosen to give room for an unforseen scenario
+*/
 #define STRING_SIZE 128
 #define BUFFER_SIZE STRING_SIZE * 2
 #define MAX_BUFFER_DIFFERENCE 10
