@@ -65,8 +65,6 @@
 #include "../inc/arc/arc.h"
 #include "../inc/arc/arc_asm_common.h"
 
-	.file "arc_exc_asm.S"
-
 /* entry for cpu exception handling */
 	.text
 	.global exc_entry_cpu
